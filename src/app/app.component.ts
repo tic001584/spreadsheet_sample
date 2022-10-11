@@ -8,8 +8,9 @@ import * as jspreadsheet from "jspreadsheet-ce"
 })
 export class AppComponent {
   @ViewChild("spreadsheet")
-  title = "CodeSandbox";
   spreadsheet!: ElementRef;
+  title = "CodeSandbox";
+  
   ngAfterViewInit() {
     jspreadsheet(this.spreadsheet.nativeElement, {
       data:[[]],
